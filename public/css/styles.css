@@ -132,7 +132,7 @@ h1{
     border-top: 2px solid red;
 }
 
-#about-header, #create-note-header, #edit-note-header{
+#about-header, #create-note-header, #edit-note-header, #error-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -140,7 +140,7 @@ h1{
     padding: 10px;
 }
 
-#about-div-link, #create-note-div-link, #edit-note-div-link{
+#about-div-link, #create-note-div-link, #edit-note-div-link, #error-div-link{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -182,6 +182,10 @@ h1{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+#error-p{
+    padding: 10px;
 }
 
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("./partials/head.ejs") %> 
+<%- include("../partials/head.ejs") %> 
 <body>
     <% const editRoute = `/notes/${id}` %> 
     <header id = "edit-note-header">
@@ -17,14 +17,23 @@
         <% const {title, subject, body} = note %> 
         <form id = "edit-note-form" action = <%= editRoute %>  method = "post">
             <label for = "title">Title</label>
-            <textarea id = "title" required name = "title" autofocus><%= title %></textarea>
+            <input id = "title" required name = "title" autofocus="" onfocus="this.setSelectionRange(this.value.length,this.value.length);" value = "<%= title %>"/>
             <label for = "subject">Subject</label>
-            <textarea id = "subject" required name = "subject"><%= subject %></textarea>
+            <input id = "subject" required name = "subject" value = "<%= subject %>"/>
             <label for = "body">Body</label>
             <textarea id = "body" required name = "body"><%= body %></textarea>
             <button id = "submit">Submit</button>
         </form>
     </main>
-    <%- include("./partials/footer.ejs") %>  
+    <%- include("../partials/footer.ejs") %>  
 </body>
 </html>
+
+<!-- autofocus="" onfocus="this.setSelectionRange(this.value.length,this.value.length);" 
+    The above line will put the cursor at the end of the text in the input element of html forms for autofocus
+    Place this line in the input element as shown in line 20 above
+-->
+
+<!-- In case of injecting dynamic values as value of an attribute wrap it in quotes and then place the variable name
+as shown below:
+value = "View Engine wrapper(Variable Name)" -->

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("./partials/head.ejs") %> 
+<%- include("../partials/head.ejs") %> 
 <body>
     <header id = "display-note-header">
         <div id = "display-note-div-back">
@@ -18,7 +18,7 @@
                     edit
                 </span>
             </a>
-            <button id = "display-note-button-delete" title="delete the note">
+            <button id = "display-note-button-delete" title="delete the note" data-id = "<%= id %> ">
                 <span id = "display-note-span-delete" class="material-icons">
                     delete
                 </span>
@@ -33,7 +33,7 @@
             <p><%= note.body %></p>
         </div>
     </main>
-    <%- include("./partials/footer.ejs") %> 
+    <%- include("../partials/footer.ejs") %> 
     <script src = "/js/script.js"></script>  
     <!-- Here src takes the absolute path root starting from public folder -->
 </body>

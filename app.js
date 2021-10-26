@@ -33,4 +33,12 @@ app.get("/about", (req, res) => {
     });
 });
 
+app.use((req, res) => {
+    res.render("error/404", {
+        title: "404 Error Page",
+        errorType: `404 Error`,
+        msg: `Please recheck the url.......`
+    });
+});
+
 

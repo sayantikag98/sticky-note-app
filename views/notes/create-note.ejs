@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("./partials/head.ejs") %> 
+<%- include("../partials/head.ejs") %> 
 <body>
     <header id = "create-note-header">
         <h1>Create a new note</h1>
         <div id = "create-note-div-link">
             <a id = "home-link" title = "Home" href = "/">🏠</a>
-            <a id = "notes-link" title = "About" href = "/about">🔍</a>
-            <a id = "create-link" title = "All Notes" href = "/notes">📁</a>
+            <a id = "about-link" title = "About" href = "/about">🔍</a>
+            <a id = "notes-link" title = "All Notes" href = "/notes">📁</a>
         </div>
     </header>
     <main id = "create-note-main">
         <form id = "create-note-form" action = "/notes" method = "post">
             <label for = "title">Title</label>
-            <textarea id = "title" required name = "title"></textarea>
+            <input id = "title" required name = "title" />
             <label for = "subject">Subject</label>
-            <textarea id = "subject" required name = "subject"></textarea>
+            <input id = "subject" required name = "subject"/>
             <label for = "body">Body</label>
             <textarea id = "body" required name = "body"></textarea>
             <button id = "submit">Submit</button>
         </form>
     </main>
-    <%- include("./partials/footer.ejs") %>  
+    <%- include("../partials/footer.ejs") %>  
 </body>
 </html>
