@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %> 
+<body>
+    <header id = "display-note-header">
+        <div id = "display-note-div-back">
+            <a href = "/notes" title = "Back to all notes">
+                <span id = "display-note-span-back" class="material-icons">
+                arrow_back_ios
+                </span>
+            </a>
+            <h1>Display note</h1>
+        </div>
+        <div id = "display-note-div-edit-delete">
+            <% const editRoute = `/notes/edit/${id}` %> 
+            <a href = <%= editRoute %>  title = "edit the note">
+                <span id = "display-note-span-edit" class="material-icons">
+                    edit
+                </span>
+            </a>
+            <button id = "display-note-button-delete" title="delete the note">
+                <span id = "display-note-span-delete" class="material-icons">
+                    delete
+                </span>
+            </button>
+        </div>
+    </header>
+    <main id = "display-note-main">
+        <div id = "display-note-div">
+            <h1 id = "display-note-h1-title">Title: <%= note.title %></h1>
+            <h4 id = "display-note-h4-subject">Subject: <%= note.subject %></h4>
+            <hr id = "display-note-hr">
+            <p><%= note.body %></p>
+        </div>
+    </main>
+    <%- include("./partials/footer.ejs") %> 
+    <script src = "/js/script.js"></script>  
+    <!-- Here src takes the absolute path root starting from public folder -->
+</body>
+</html>

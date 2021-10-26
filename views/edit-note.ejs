@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %> 
+<body>
+    <% const editRoute = `/notes/${id}` %> 
+    <header id = "edit-note-header">
+        <div id = "edit-note-div-back-title">
+            <a href = <%= editRoute %>  title = "Back to edited note">
+                <span id = "edit-note-span-back" class="material-icons">
+                arrow_back_ios
+                </span>
+            </a>
+            <h1>Edit note</h1>
+        </div>
+    </header>
+    <main id = "edit-note-main">
+        <% const {title, subject, body} = note %> 
+        <form id = "edit-note-form" action = <%= editRoute %>  method = "post">
+            <label for = "title">Title</label>
+            <textarea id = "title" required name = "title" autofocus><%= title %></textarea>
+            <label for = "subject">Subject</label>
+            <textarea id = "subject" required name = "subject"><%= subject %></textarea>
+            <label for = "body">Body</label>
+            <textarea id = "body" required name = "body"><%= body %></textarea>
+            <button id = "submit">Submit</button>
+        </form>
+    </main>
+    <%- include("./partials/footer.ejs") %>  
+</body>
+</html>

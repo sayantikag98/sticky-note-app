@@ -1,0 +1,187 @@
+a{
+    text-decoration: none;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+
+h1{
+    color:red;
+}
+
+#index-main{
+    display: flex;
+    justify-content: center;
+}
+
+#index-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    height: 100vh;
+}
+
+#notes-header{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+#notes-link-div{
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+}
+
+#home-link:hover, #about-link:hover, #create-link:hover, 
+#notes-link:hover, #index-a-notes:hover,
+#display-note-span-back:hover,
+#edit-note-span-back:hover,
+#display-note-span-edit:hover,
+#display-note-span-delete:hover{
+    border-radius: 25px;
+    background-color: rgb(219, 219, 219);
+    padding: 5px;
+
+}
+
+#notes-h1{
+    background-color: rgb(243, 226, 170);
+    padding: 10px;
+    width: max-content;
+    border-left: 5px solid red;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#notes-a:hover, #display-note-span-back:hover, 
+#edit-note-span-back:hover, #display-note-span-edit:hover,
+#display-note-span-delete:hover{
+    color: red;
+}
+
+#notes-main{
+    padding-left: 10px;
+}
+
+#display-note-main{
+    display: flex;
+    justify-content: center;
+}
+
+#display-note-div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 20px;
+    border-top: 3mm ridge rgb(255, 0, 0);
+    border-bottom: 3mm ridge rgb(255, 0, 0);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-image: linear-gradient(rgb(240, 240, 163), rgba(252, 180, 177, 0.911)),
+    url('../images/background-image.jpg');
+}
+
+#display-note-header{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+#display-note-div-back{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#display-note-div-edit-delete{
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#display-note-span-back, #display-note-span-edit{
+    color: rgb(80, 79, 79);
+}
+
+#display-note-button-delete{
+    background-color: white;
+    border: none;
+    color: rgba(247, 6, 6, 0.651);
+}
+
+#display-note-h1-title{
+    margin: 0;
+}
+
+#display-note-h4-subject{
+    margin: 10px 0 5px 0;
+}
+
+#display-note-hr{
+    width: 90%;
+    border: none;
+    border-top: 2px solid red;
+}
+
+#about-header, #create-note-header, #edit-note-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    padding: 10px;
+}
+
+#about-div-link, #create-note-div-link, #edit-note-div-link{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+}
+
+#about-main{
+    padding: 20px;
+    margin: 10px 30px;
+    background-color: bisque;
+    border-radius: 20px;
+}
+
+#create-note-main, #edit-note-main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#create-note-form, #edit-note-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 5px solid red;
+}
+
+#title, #subject, #body, #submit{
+    margin: 10px;
+}
+
+#edit-note-div-back-title{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+

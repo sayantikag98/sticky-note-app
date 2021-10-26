@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %> 
+<body>
+    <main id = "index-main">
+        <div id = "index-div">
+            <h1>Welcome  </h1>
+            <h3>to</h3>
+            <h2><%= "sticky note".toUpperCase()%></h2>
+            <h3>Open 👉 <a id = "index-a-notes" title = "Go to all notes" href = "/notes">📃</a></h3>
+        </div>
+    </main>  
+    <%- include("./partials/footer.ejs") %> 
+</body>
+
+</html>

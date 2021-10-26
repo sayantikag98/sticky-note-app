@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %> 
+<body>
+    <header id = "notes-header">
+        <div id = "notes-title-div">
+            <h1>Sticky Notes</h1>
+        </div>
+        <div id = "notes-link-div">
+            <h4>
+                <a id = "home-link" title = "Home" href = "/">🏠</a>      
+            </h4>
+            <h4>
+                <a id = "about-link" title = "About" href = "/about">🔍</a>
+            </h4>
+            <h4>
+                <a id = "create-link" title = "New Note" href = "/notes/create">📝</a>
+            </h4>
+        </div>
+    </header>
+    <main id = "notes-main">
+        <% if(!notes.length){ %> 
+            <h3>No notes to display...</h3>
+        <% }else{ %> 
+            <%notes.forEach(note => { %>
+                <% const notePath = `/notes/${note._id}` %> 
+                <h1 id = "notes-h1"><a id = "notes-a" title = "Go to this note"  href = <%= notePath %> ><%= note.title %> </a></h1>
+            <% }) %> 
+        <% } %>  
+    </main>
+    <%- include("./partials/footer.ejs") %> 
+</body>
+</html>
