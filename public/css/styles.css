@@ -79,6 +79,7 @@ h1{
     flex-direction: column;
     align-items: flex-start;
     width: 50%;
+    overflow-wrap: break-word; 
     padding: 20px;
     border-top: 3mm ridge rgb(255, 0, 0);
     border-bottom: 3mm ridge rgb(255, 0, 0);
@@ -87,6 +88,8 @@ h1{
     background-image: linear-gradient(rgb(240, 240, 163), rgba(252, 180, 177, 0.911)),
     url('../images/background-image.jpg');
 }
+
+/* Overflow-wrap: break-word; => This is to take care of the overflow of text body  */
 
 #display-note-header{
     display: flex;
