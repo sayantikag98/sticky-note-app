@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import router from "./routes/notes.js"; // putting .js extension is important over here
 
 const app = express();
-const connectionString = `mongodb+srv://Sayantikag:XXXXXXXXXXXXX@database-practice.3cjpm.mongodb.net/sticky-note-db?retryWrites=true&w=majority`;
+const connectionString = `mongodb+srv://Sayantikag:XXXXXXXXXXXX@database-practice.3cjpm.mongodb.net/sticky-note-db?retryWrites=true&w=majority`;
 
 mongoose.connect(connectionString)
 .then(result => {

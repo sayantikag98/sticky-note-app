@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Henny+Penny&family=Montserrat:ital,wght@0,500;1,500&family=Pacifico&family=Zen+Maru+Gothic:wght@300&display=swap');
+
 a{
     text-decoration: none;
 }
@@ -26,10 +29,19 @@ h1{
     height: 100vh;
 }
 
+#index-h2-app-name{
+    font-family: 'Henny Penny', cursive; 
+    letter-spacing: 5px;
+}
+
 #notes-header{
     display: flex;
     justify-content: space-between;
     padding-left: 10px;
+}
+
+#notes-main-content{
+    padding-left: 20px;
 }
 
 #notes-link-div{
@@ -64,12 +76,20 @@ h1{
     padding: 5px 30px 5px 10px;
 }
 
+#notes-grid-view-link, #notes-grid-view-list-link{
+    color: rgb(96, 95, 160);
+    font-size: 20px;   
+} 
+
 #home-link:hover, #about-link:hover, #create-link:hover, 
 #notes-link:hover, #index-a-notes:hover,
 #display-note-span-back:hover,
 #edit-note-span-back:hover,
 #display-note-span-edit:hover,
-#display-note-span-delete:hover{
+#display-note-span-delete:hover,
+#notes-grid-view-link:hover,
+#notes-grid-view-list-link:hover
+{
     border-radius: 25px;
     background-color: rgb(219, 219, 219);
     padding: 5px;
@@ -83,6 +103,7 @@ h1{
     border-left: 5px solid red;
     border-bottom-right-radius: 15px;
     border-top-left-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .notes-a:hover, #display-note-span-back:hover, 
@@ -149,10 +170,17 @@ h1{
 
 #display-note-h1-title{
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #display-note-h4-subject{
     margin: 10px 0 5px 0;
+    font-family: 'Courgette', cursive;
+}
+
+#display-note-p-body{
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: bolder;
 }
 
 #display-note-hr{
@@ -216,5 +244,53 @@ h1{
 #error-p{
     padding: 10px;
 }
+
+#notes-grid-view-main-content, #notes-grid-view-notes-outer-div{
+    margin: 0 30px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.notes-grid-view-notes-link{
+    height: max-content;
+}
+
+.notes-grid-view-individual-note-div{
+    background-color: beige;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid red;
+    box-shadow: 2px 2px 7px black;
+    font-size: x-small;
+    
+}
+
+.notes-grid-view-note-title{
+    color: red;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.notes-grid-view-note-subject{
+    font-family: 'Courgette', cursive;
+    color: dodgerblue;
+    letter-spacing: 1px;
+
+}
+
+.notes-grid-view-note-body{
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: bolder;
+    color:rgb(87, 86, 143);
+}
+
+.notes-grid-view-note-subject:hover, .notes-grid-view-note-body:hover{
+    color: red;
+}
+
+
 
 

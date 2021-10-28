@@ -1,5 +1,5 @@
 import express from "express";
-import {getAllNotes, addNote, createNoteForm, editNoteForm, getANote, editNoteFormSubmit, deleteNote} from "../controllers/notes.js"
+import {getAllNotes, addNote, displayGridView, createNoteForm, editNoteForm, getANote, editNoteFormSubmit, deleteNote} from "../controllers/notes.js"
 
 const router = express.Router();
 
@@ -8,6 +8,8 @@ const router = express.Router();
 router.get("/", getAllNotes);
 
 router.post("/", addNote);
+
+router.get("/grid-view", displayGridView);
 
 router.get("/create", createNoteForm);
 

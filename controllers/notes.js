@@ -20,6 +20,19 @@ export const getAllNotes = (req, res) => {
     });    
 };
 
+export const displayGridView = (req, res) => {
+    Note.find()
+    .then(result => {
+        res.render("notes/notes-grid-view", {
+            title: "Notes Grid View",
+            notes: result
+        });
+    })
+    .catch(error => {
+        console.log(error.message);
+    });
+};
+
 export const addNote = (req, res) => {
     const note = new Note(req.body);
     note.save()
@@ -94,3 +107,4 @@ export const deleteNote = (req, res) => {
         notFoundError(req.params.id, res);
     });
 };
+

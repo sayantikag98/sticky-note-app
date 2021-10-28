@@ -2,8 +2,8 @@
 <html lang="en">
 <%- include("../partials/head.ejs") %> 
 <body>
-    <% const outerDivId = "notes-main-content" %> 
-    <% const innerDivClass = "notes-individual-note-div" %> 
+    <% const outerDivId = "notes-grid-view-main-content" %> 
+    <% const innerDivClass = "notes-grid-view-individual-note-div" %> 
     <header id = "notes-header">
         <div id = "notes-title-div">
             <h1>Sticky Notes</h1>
@@ -19,9 +19,9 @@
                 <a id = "create-link" title = "New Note" href = "/notes/create">📝</a>
             </h4>
             <h4>
-                <a id = "view-link" title = "New Note" href = "/notes/grid-view">
-                    <span id = "notes-grid-view-link" class="material-icons">
-                        grid_view
+                <a id = "view-link" title = "New Note" href = "/notes">
+                    <span id = "notes-grid-view-list-link"class="material-icons">
+                        view_list
                     </span>
                 </a>
             </h4>
@@ -37,17 +37,21 @@
             <% if(!notes.length){ %> 
                 <h3>No notes to display...</h3>
             <% }else{ %>
-                <%notes.forEach(note => { %>
-                    <div class = "<%= innerDivClass %>">
-                        <% const notePath = `/notes/${note._id}` %> 
-                        <h1 class = "notes-h1"><a class = "notes-a" title = "Go to this note"  href = <%= notePath %> ><%= note.title %> </a></h1>
-                    </div>
+                <% notes.forEach(note => { %> 
+                    <% const notePath = `/notes/${note._id}` %> 
+                    <a class = "notes-grid-view-notes-link" href = <%= notePath %> title = "Go to this note" >
+                        <div class = "<%= innerDivClass %>">
+                            <h2 class = "notes-grid-view-note-title"><%= note.title %> </h2>
+                            <h4 class = "notes-grid-view-note-subject"><%= note.subject %> </h4>
+                            <p class = "notes-grid-view-note-body"><%= note.body %> </p>
+                        </div>
+                    </a>
                 <% }) %> 
             <% } %> 
         </div> 
     </main>
     <%- include("../partials/footer.ejs") %> 
-    <script src = "/js/search.js" notes = '<%= JSON.stringify(notes) %>' outerDivId = <%= outerDivId %> innerDivClass = <%= innerDivClass %>></script>
+    <script src = "/js/search.js" notes = '<%= JSON.stringify(notes) %>' outerDivId = <%= outerDivId %>  innerDivClass = <%= innerDivClass %> ></script>
     <!-- in order to pass parameters in script tag first stringify the parameter value
     and then parse while receiving the value in javascript file -->
 </body>
