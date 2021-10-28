@@ -19,15 +19,24 @@
         </div>
     </header>
     <main id = "notes-main">
-        <% if(!notes.length){ %> 
-            <h3>No notes to display...</h3>
-        <% }else{ %> 
-            <%notes.forEach(note => { %>
-                <% const notePath = `/notes/${note._id}` %> 
-                <h1 id = "notes-h1"><a id = "notes-a" title = "Go to this note"  href = <%= notePath %> ><%= note.title %> </a></h1>
-            <% }) %> 
-        <% } %>  
+        <div id = "notes-search-content">
+            <input id = "notes-input" placeholder = "Search note title here" autofocus type = "text"/>
+            <i id = "notes-search-icon" class = "material-icons">search</i>
+        </div>
+        <div id = "notes-main-content">
+            <% if(!notes.length){ %> 
+                <h3>No notes to display...</h3>
+            <% }else{ %> 
+                <%notes.forEach(note => { %>
+                    <% const notePath = `/notes/${note._id}` %> 
+                    <h1 class = "notes-h1"><a class = "notes-a" title = "Go to this note"  href = <%= notePath %> ><%= note.title %> </a></h1>
+                <% }) %> 
+            <% } %> 
+        </div> 
     </main>
     <%- include("../partials/footer.ejs") %> 
+    <script src = "/js/search.js" data-notes = '<%= JSON.stringify(notes) %>' ></script>
+    <!-- in order to pass parameters in script tag first stringify the parameter value
+    and then parse while receiving the value in javascript file -->
 </body>
 </html>

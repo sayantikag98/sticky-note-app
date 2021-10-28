@@ -24,7 +24,7 @@ export const addNote = (req, res) => {
     const note = new Note(req.body);
     note.save()
     .then(result => {
-        res.redirect("/notes");
+        res.redirect(`/notes/${note.id}`);
     })
     .catch(error => {
         console.log(error.message);

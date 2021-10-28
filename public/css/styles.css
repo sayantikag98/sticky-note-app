@@ -38,6 +38,32 @@ h1{
     justify-content: space-around;
 }
 
+#notes-search-content{
+    display: flex;
+    justify-content: center;
+}
+
+#notes-search-icon{
+    position: relative;
+    right: 30px;
+    display:flex;
+    align-items: center;
+}
+
+#notes-input{
+    border-radius: 10px;
+    border: 2px solid black;
+    outline: none;
+}
+
+#notes-input:hover{
+    box-shadow: 3px 3px 8px black;
+}
+
+#notes-input[type=text]{
+    padding: 5px 30px 5px 10px;
+}
+
 #home-link:hover, #about-link:hover, #create-link:hover, 
 #notes-link:hover, #index-a-notes:hover,
 #display-note-span-back:hover,
@@ -50,7 +76,7 @@ h1{
 
 }
 
-#notes-h1{
+.notes-h1{
     background-color: rgb(243, 226, 170);
     padding: 10px;
     width: max-content;
@@ -59,7 +85,7 @@ h1{
     border-top-left-radius: 15px;
 }
 
-#notes-a:hover, #display-note-span-back:hover, 
+.notes-a:hover, #display-note-span-back:hover, 
 #edit-note-span-back:hover, #display-note-span-edit:hover,
 #display-note-span-delete:hover{
     color: red;
